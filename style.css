@@ -1,12 +1,11 @@
-
-@-webkit-keyframes myfirst{
+/*@-webkit-keyframes myfirst{
   from {-webkit-filter: blur(0px);}
   to {-webkit-filter: blur(3px);}
 }
 @-webkit-keyframes myOpacity{
   from{opacity: .0;}
   to{opacity: .5}
-}
+}*/
 
 
 
