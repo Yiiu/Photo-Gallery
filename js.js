@@ -11,22 +11,20 @@ window.onload = function(){
 	for(var i=0;i<aImg.length;i++){
 		num++
 		aImg[i].index = num;
-		if(warp == true){
-			aImg[num].onclick = function(){
-				oZz.className = "black";
-				oCc.className = "black opacity";
-				wrapper.className = "blur hidden";
-				window.onresize =function(){wrapHeight()};
-				wrapHeight()
-				warp = false;
-			}
-		}else {
+		aImg[i].warp = warp;
+		aImg[num].onclick = function(){
+			warp = false;
+			oZz.className = "black";
+			oCc.className = "black opacity";
+			wrapper.className = "blur hidden";
+			window.onresize =function(){wrapHeight()};
+			wrapHeight()
+		}
+		if(warp){
 			oCc.onclick = function (){
-				alert(1)
 				oZz.className = "none";
 				oCc.className = "none";
 				wrapper.className = "";
-				warp = true;
 			}
 		}
 	}
