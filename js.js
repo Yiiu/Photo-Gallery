@@ -6,13 +6,17 @@ window.onload = function(){
 	var oZz = document.getElementById('zz');
 	var wrapper =document.getElementById('wrapper');
     var oC = document.getElementById('c');
+    var oCimg = oC.getElementsByTagName('img');
+    var oX = document.getElementById('x');
 	var num = -1;
 	warp = true;
 	for(var i=0;i<aImg.length;i++){
 		num++
-		aImg[i].index = num;
+		aImg[i].index = num+1;
 		aImg[i].warp = warp;
 		aImg[num].onclick = function(){
+			var oCimg = document.getElementById('imgs');
+			oCimg.src = "img/" + this.index + ".jpg";
 			warp = false;
 			oZz.className = "black";
 			oCc.className = "black opacity";
@@ -21,7 +25,7 @@ window.onload = function(){
 			wrapHeight()
 		}
 		if(warp){
-			oCc.onclick = function (){
+			oX.onclick = function (){
 				oZz.className = "none";
 				oCc.className = "none";
 				wrapper.className = "";

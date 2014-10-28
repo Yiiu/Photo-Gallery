@@ -23,13 +23,10 @@ color: #333;
 .heigimg {height: 200px;}
 #cc {width: 100%;height: 100%;position: absolute;top: 0px;left:0px;background: black;
 }
-#zz {z-index: 50;position: absolute; top: 10px;left: 50%;width:700px;}
-.is-Image{
-position: relative;
-left: -50%;
-}
+#zz {z-index: 999;position: absolute;top: 70px;width: 100%;}
+#c {width:700px;margin: 0 auto;height: auto;}
 .opacity {-webkit-animation: myOpacity 0.2s ease-in-out;opacity: .5;}
-span {
+/*span {
 height: 66px;
 outline: 0 none;
 position: absolute;
@@ -39,7 +36,7 @@ cursor: pointer;
 margin: 0;
 font-size: 3em;
 color: #fff;
-}
+}*/
 .prev {right: 1em;
 background: url("../images/next.svg") no-repeat top center rgba(0, 0, 0, 0);}
 .next {right: 1em;
@@ -50,6 +47,19 @@ background: url("../images/next.svg") no-repeat top center rgba(0, 0, 0, 0);}
 .none {display: none;}
 .black {display: black;}
 .hidden{overflow: hidden;}
+.icon-cancel {
+  font-size: 2.7em;
+  color: white;
+
+}
+#x {
+  cursor: pointer;
+  margin: 10px;
+  background: black;
+  position: relative;
+  top: 0;
+  float:right;
+}
 
 /*@media screen and (max-width: 1000px) {
        #content { width: 60%;  
