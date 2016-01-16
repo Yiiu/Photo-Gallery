@@ -9,26 +9,29 @@
 <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 <body>
 <div id="wrapper">
-    <div id="header">
+    <!--<div id="header">
         <a href="javascript:;"><i class="icon-picture"></i>迷之相册</a>
-    </div>
-    <div></div>
+    </div>-->
+    <!--  图片预览图  -->
     <div id="content">
-        <div class="img"><img src="img/1.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/2.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/3.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/4.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/5.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/6.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/7.jpg" class="heigimg"></div>
-        <div class="img"><img src="img/8.jpg" class="heigimg"></div>
+        <div class="img">
+            <img src="">
+            <div class="chakan">
+                <div class="biaoti">你</div>
+                <div class="riqi">2015-2-2</div>
+            </div>
+        </div>
     </div>
 </div>
-<div id="cc" class="none">
-	<span id="x"><i class="icon-cancel"></i></span>
-</div>
-<div id="zz" class="none">
-    <div id="c"><img src="img/8.jpg" width="700px" id="imgs"></div>
+<!-- 图片放大布局 -->
+<div id="big-img" class="none">
+    <span id="button-on">
+        <!-- 关闭按钮 -->
+        <i class="icon-cancel"></i>
+    </span>
+    <div id="big-img-i">
+        <img src="img/8.jpg" width="700px" id="imgs">
+    </div>
 </div>
 </body>
 <script type="text/javascript" src="js.js"></script>

@@ -2,6 +2,7 @@ html {
 	font: 81.25% "Microsoft YaHei", arial, helvetica, sans-serif;
 	background: #fff;
 	color: #333;
+
 }
 *{ 
 	margin: 0;
@@ -11,7 +12,7 @@ html {
 	height: 50px;
 	width: 100%;
 	border-bottom: solid #ccc 1px ;
-	margin-bottom:30px ; 
+	/*margin-bottom:30px ; */
 }
 #header a { 
 	line-height: 50px;
@@ -22,52 +23,47 @@ html {
 	text-decoration: none;
 }
 #content { 
-	width:960px;
-	margin: 10px auto;
-	padding:0 20px;
-	height: 500px;
+	widows: 100%;
+	overflow: hidden;
 }
 .img {
-	height:200px;
-	width:200px;
+	height:0;
+	width:20%;
+	padding-bottom: 20%;
 	background:#ccc;
 	float:left;
-	margin: 20px;
 	overflow: hidden;
 	position: relative;
-	border-radius:4px;
-	box-shadow: 1px 2px 15px #000;
 	cursor:pointer;
 }
-.img span {
+.chakan{
 	position: absolute;
-	top: 0;
-	left: 0;
-	height: 200px;
-	width:200px;
+	top: 50%;
+	left: 50%;
+	width:100%;
+	height:100%;
+	padding:1px;
+	text-align:center;
+	background:black;
+	color:#fff;
+	opacity:.0;
+	transform: translate(-50%, -50%);
+	transition:0.3s;
 }
-.heigimg {
-	height: 200px;
+.biaoti{
+	margin-top: 25%;
+	text-align: center;
+	width:100%;
+	height:30%;
+	font-size:4vw;
 }
-#cc {
-	width: 100%;
-	height: 100%;
-	position: absolute;top: 0px;left:0px;background: black;
-}
-#zz {
-	z-index: 999;
-	position: absolute;
-	top: 70px;
-	width: 100%;
-}
-#c {
-	width:700px;
-	margin: 0 auto;
-	height: auto;
+.riqi{
+	width:100%;
+	height:30%;
+	font-size:2vw;
 }
 .opacity {
-	-webkit-animation: myOpacity 0.2s ease-in-out;
-	opacity: .5;
+	opacity:.5;
 }
 .prev {
 	right: 1em;
@@ -77,28 +73,17 @@ html {
 	right: 1em;
 	background: url("../images/next.svg") no-repeat top center rgba(0, 0, 0, 0);
 }
-.blur {
-	-webkit-animation: myfirst 0.1s ease;
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	-ms-filter: blur(3px);
-	filter: blur(3px);
+.block{
+	display:block;
 }
 .none {
 	display: none;
 }
-.black {
-	display: black;
-}
-.hidden{
-	overflow: hidden;
-}
 .icon-cancel {
   font-size: 2.7em;
   color: white;
-
 }
-#x {
+#button-on {
   cursor: pointer;
   margin: 10px;
   background: black;
@@ -106,6 +91,26 @@ html {
   top: 0;
   float:right;
 }
-
-
-
+#big-img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.8)!important;
+	/* 兼容ie */
+	filter:Alpha(opacity=60);
+	background:black;
+	overflow:hidden;
+}
+#big-img-i{
+	height:auto;
+	width:auto;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+.img img{
+	width:200%;
+}
