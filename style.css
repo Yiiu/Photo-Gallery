@@ -23,6 +23,7 @@ html {
 	text-decoration: none;
 }
 #content { 
+	z-index: 10;
 	widows: 100%;
 	overflow: hidden;
 }
@@ -85,8 +86,6 @@ html {
 }
 #button-on {
   cursor: pointer;
-  margin: 10px;
-  background: black;
   position: relative;
   top: 0;
   float:right;

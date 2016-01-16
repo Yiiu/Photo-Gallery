@@ -17,6 +17,7 @@ function ini(){
     var iBimg = document.getElementById('big-img-i');
     var Bimg = iBimg.getElementsByTagName('img')[0]; 
 	var num = -1;
+	var opacity = 0;
 	warp = true;
 	for(var i=0;i<aImg.length;i++){
 		num++;
@@ -25,17 +26,32 @@ function ini(){
 		aImg[num].onclick = function(){
 			var oCimg = document.getElementById('imgs');
 			Bimg.src = "img/" + this.index + ".jpg";
-			warp = false;
 			oBimg.className = "block";
+			timer = setInterval(function(){
+				if (opacity == 100){
+					clearInterval(timer);
+				} 
+				else {
+					opacity+=10;
+					oBimg.style.opacity = opacity / 100;
+				}
+			},15);
+			warp = false;
 		}
 		if(warp){
 			oBon.onclick = function (){
-				oBimg.className = "none";
-				warp = true;
-			}
-			oBimg.onclick = function (){
-				oBimg.className = "none";
-				warp = true;
+				timer = setInterval(function(){
+					if (opacity == 0){
+						oBimg.className = "none";
+						warp = true;
+						oBimg.style.opacity = 0;
+						clearInterval(timer);
+					} 
+					else {
+						opacity-=10;
+						oBimg.style.opacity = opacity / 100;
+		           	}
+				},15);
 			}
 		}
 	}
